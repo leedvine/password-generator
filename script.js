@@ -108,6 +108,8 @@ let requireSpecialCharacters =[];
 let validPasswordCharacters = [];
 
 
+
+
 // Function to prompt user for password options
   function getPasswordOptions() {
     passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
@@ -162,34 +164,28 @@ let validPasswordCharacters = [];
         if (requireSpecialCharacters === true) {
           validPasswordCharacters = validPasswordCharacters.concat(specialCharacters)
         }
-  
+
+// Task inferred that you should choose a random amount of characters from multiple arrays
+// then combine. Seemed wrong or more complicated. I chose to concat all valid arrays in to one 
+// as above and then just random pick from one valid array to the length of characters 
+// originally choosen by user
+
+let finalPassword = [];
+
+
+
+for (var i = 0; i < passwordLength; i++) {
+  finalPassword = finalPassword + validPasswordCharacters[Math.floor(Math.random() * validPasswordCharacters.length)];
+}
+return finalPassword;
 }
 
-
-
-//The below most likely acheived by math object. Not sure of security using this in regards to
-// password generation but it should achieve task. Should target specific arrays to pull random charachters
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-}
-
-// The below should combine all random selections from multiple arrays in 
-// to one and create as a string
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
-//not sure of the below statement at this point
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
 
-//Presnt the user with the password (see string created 2 steps above)
+//Present the user with the password (see string created 2 steps above)
 
 // Write password to the #password input
 function writePassword() {
