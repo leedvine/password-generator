@@ -94,20 +94,39 @@ var upperCasedCharacters = [
 // I chose the while loop to check paramaters met. If not then I used an alert to inform the user 
 // and request a valid answer. I also used an alert to confirm the choosen option.
 
-let passwordLength = " ";
+let passwordLength =[];
+
+// Created other variables to see if boolean of True and False
+// True to be included by clicking OK and if Cancel clicked 
+// to be excluded from password
+
+let requireLowerCasedCharacters =[];
+let requireUpperCasedCharacters =[];
+let requireNumericCharacters =[];
+let requireSpecialCharacters =[];
+
 
 // Function to prompt user for password options
   function getPasswordOptions() {
     passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
   
     // Loop if answer is outside the parameters 
-    while(passwordLength < 8 || passwordLength > 62) {
-        alert("Please specify a length between 8 and 62 charcters");
-        passwordLength = (prompt("How many characters would you like your password to contain?"));
+    while(passwordLength < 8 || passwordLength > 64) {
+        alert("Please specify a length between 8 and 64 charcters");
+        passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 64"));
         } 
   
         // Repeat back how many charactes the user will have  
-        alert(`You selected passwordLength} characters`); 
+        alert("Thank you. You selected " + passwordLength + " characters"); 
+
+        // Using simple comirm() with OK being True and Cancel being false to assertain
+        // other aspects of the password criteria. Any set to true will be used in password 
+        // creation further down code. False and they won't.
+
+        let requireLowerCasedCharacters = (confirm("Would you like to include lowercase characters?"));
+        let requireUpperCasedCharacters = (confirm("Would you like to include uppercase characters?"));
+        let requireNumericCharacters = (confirm("Would you like to include numbers?"));
+        let requireSpecialCharacters = (confirm("Would you like to include special characters?"));
 }
 
 
