@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-var specialCharacters = [
+let specialCharacters = [
   '@',
   '%',
   '+',
@@ -24,12 +24,10 @@ var specialCharacters = [
   '_',
   '.'
 ];
-
-// Array of numeric characters to be included in password
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+let lowerCasedCharacters = [
   'a',
   'b',
   'c',
@@ -59,7 +57,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+let upperCasedCharacters = [
   'A',
   'B',
   'C',
@@ -105,6 +103,10 @@ let requireUpperCasedCharacters =[];
 let requireNumericCharacters =[];
 let requireSpecialCharacters =[];
 
+// Variable to store valid characters to choose from after user has decided what they want
+
+let validPasswordCharacters = [];
+
 
 // Function to prompt user for password options
   function getPasswordOptions() {
@@ -127,7 +129,42 @@ let requireSpecialCharacters =[];
         let requireUpperCasedCharacters = (confirm("Would you like to include uppercase characters?"));
         let requireNumericCharacters = (confirm("Would you like to include numbers?"));
         let requireSpecialCharacters = (confirm("Would you like to include special characters?"));
+
+        // While loop introduced to insure one option is confirmed
+        // This is so password has characters to generate from
+
+        while(requireLowerCasedCharacters === false && requireUpperCasedCharacters === false && requireNumericCharacters === false && requireSpecialCharacters === false) {
+          alert("You need to select at least one type of charaters to generate password");
+          
+        requireLowerCasedCharacters = (confirm("Would you like to include lowercase characters?"));
+        requireUpperCasedCharacters = (confirm("Would you like to include uppercase characters?"));
+        requireNumericCharacters = (confirm("Would you like to include numbers?"));
+        requireSpecialCharacters = (confirm("Would you like to include special characters?"));
+
+          } 
+    
+
+        // If statements to see if characters to be used and concat to validPasswordCharacters storing all
+        // valid characters available for selection
+
+        if (requireLowerCasedCharacters === true) {
+          validPasswordCharacters = validPasswordCharacters.concat(lowerCasedCharacters)
+        }
+    
+        if (requireUpperCasedCharacters === true) {
+          validPasswordCharacters = validPasswordCharacters.concat(upperCasedCharacters)
+        }
+          
+        if (requireNumericCharacters === true) {
+          validPasswordCharacters = validPasswordCharacters.concat(numericCharacters)
+        }
+    
+        if (requireSpecialCharacters === true) {
+          validPasswordCharacters = validPasswordCharacters.concat(specialCharacters)
+        }
+  
 }
+
 
 
 //The below most likely acheived by math object. Not sure of security using this in regards to
