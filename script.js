@@ -88,14 +88,28 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// After hours of mindless Googling the below must be best achieved via Javascript prompt() method
+
 
 // Using alerts and possibly document.write() to inform user of choice and errors
+// I chose the while loop to check paramaters met. If not then I used an alert to inform the user 
+// and request a valid answer. I also used an alert to confirm the choosen option.
+
+let passwordLength = " ";
 
 // Function to prompt user for password options
-function getPasswordOptions() {
-
+  function getPasswordOptions() {
+    passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
+  
+    // Loop if answer is outside the parameters 
+    while(passwordLength < 8 || passwordLength > 62) {
+        alert("Please specify a length between 8 and 62 charcters");
+        passwordLength = (prompt("How many characters would you like your password to contain?"));
+        } 
+  
+        // Repeat back how many charactes the user will have  
+        alert(`You selected passwordLength} characters`); 
 }
+
 
 //The below most likely acheived by math object. Not sure of security using this in regards to
 // password generation but it should achieve task. Should target specific arrays to pull random charachters
