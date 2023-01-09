@@ -181,21 +181,17 @@ return finalPassword;
 }
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+ // Add the password to the input field for the user to see
 
+function showPassword() {
+  let finalPassword = getPasswordOptions();
+  let displayPassword = document.querySelector("#password");
 
-//Present the user with the password (see string created 2 steps above)
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
+  displayPassword.value = finalPassword;
 }
 
-//This is the event (click) that will ultimately present the user with the password
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+
+const generateBtn = document.getElementById("generate");
+generateBtn.addEventListener('click', showPassword);
