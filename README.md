@@ -1,81 +1,71 @@
-# Module 5 Challenge: Password Generator
+## Overview
 
-## Overvieww
+Create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
-
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
-
-## Instructions
-
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+It will allow show alerts of validation and errors, prompting the user to select appropriate criteria.
 
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+### Screenshot showing example of what user presented with
 
-## Grading Requirements
+![](./images/start-screen.jpg)
+<br><br>
 
-This challenge is graded based on the following criteria: 
+### Screenshot showing prompt
+![](./images/prompt.jpg)
+<br><br>
 
-### Technical Acceptance Criteria: 40%
+### Screenshot showing alert
+![](./images/alert.jpg)
+<br><br>
 
-* Satisfies all of the above acceptance criteria plus the following:
+### Screenshot showing final example of result expected
+![](./images/result.jpg)
+<br><br>
 
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
+### Links
 
-### Deployment: 32%
+- Repo URL: https://github.com/leedvine/password-generator
+<br><br>
+- Live Site URL: https://leedvine.github.io/password-generator/
 
-* Application deployed at live URL.
+## My process
 
-* Application loads with no errors.
+### Built with
 
-* Application GitHub URL submitted.
+- Use of Javascript variables, functions, While and For loops as well as maths and if conditions
+<br><br>
+### What I learned
 
-* GitHub repository that contains application code.
+Using prompts and alerts it is possible to direct a user through a process to give them a result based on their choices and adhearing to choice criteria.
+<br><br>
+By using While loops it insures that the user is presented with information (alerts) and the repetition of questions (confirms) to validate choices.
+<br><br>
+By using "if" statements and .concat method we can take confirmed data and build one array of validated criteria.
 
-### Application Quality: 15%
+Using Math we can create a random set of characters from the above array.
 
-* Application user experience is intuitive and easy to navigate.
+<br><br>
+### Useful resources
+<br><br>
+https://www.w3schools.com/jsref/met_win_prompt.asp
+<br><br>
+https://www.w3schools.com/jsref/met_win_alert.asp
+<br><br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+<br><br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+<br><br>
+## Author
+  Lee Vine
+- GitHub - https://github.com/leedvine
 
-* Application user interface style is clean and polished.
+## Installation
 
-* Application resembles the mock-up functionality provided in the challenge instructions.
+Simplest way to view the project is on GitHub pages here https://leedvine.github.io/password-generator/
 
-### Repository Quality: 13%
+You can also download the files to your local environment from Github here https://github.com/leedvine/password-generator and right click the index file to open in browser.
 
-* Repository has a unique name.
+It is also possible to download from the above link and instal on any hosting owned by yourself. Note this should only be done on unused / clean hosting account 
 
-* Repository follows best practices for file structure and naming conventions.
+Installing in folders with the same name here can overwrite your existing files.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-# password-generator
-# password-generator

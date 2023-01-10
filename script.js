@@ -88,39 +88,36 @@ let upperCasedCharacters = [
 
 
 
-// Using alerts and possibly document.write() to inform user of choice and errors
-// I chose the while loop to check paramaters met. If not then I used an alert to inform the user 
-// and request a valid answer. I also used an alert to confirm the choosen option.
+// Created a var to hold password length characters
 
 let passwordLength =[];
 
-// Created other variables to see if boolean of True and False
-// True to be included by clicking OK and if Cancel clicked 
-// to be excluded from password
+// Created other variables to see if boolean of True and False on questioning
+
 
 let requireLowerCasedCharacters =[];
 let requireUpperCasedCharacters =[];
 let requireNumericCharacters =[];
 let requireSpecialCharacters =[];
 
-// Variable to store valid characters to choose from after user has decided what they want
+// Variable to store valid characters to choose from after user has decided what characters they would like
 
 let validPasswordCharacters = [];
 
 
 
 
-// Function to prompt user for password options
+// Function to prompt user for password options and store data
   function getPasswordOptions() {
     passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
   
-    // Loop if answer is outside the parameters 
+    // While Loop created to alert and then repeat question if answer is outside the length paramater 
     while(passwordLength < 8 || passwordLength > 64) {
         alert("Please specify a length between 8 and 64 charcters");
         passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 64"));
         } 
   
-        // Repeat back how many charactes the user will have  
+        // Repeat back to the user how many characters the user will have  
         alert("Thank you. You selected " + passwordLength + " characters"); 
 
         // Using simple comirm() with OK being True and Cancel being false to assertain
@@ -132,8 +129,8 @@ let validPasswordCharacters = [];
         let requireNumericCharacters = (confirm("Would you like to include numbers?"));
         let requireSpecialCharacters = (confirm("Would you like to include special characters?"));
 
-        // While loop introduced to insure one option is confirmed
-        // This is so password has characters to generate from
+        // While loop introduced to insure one option is confirmed. If not questions repeat until one selectection at least - is made
+       
 
         while(requireLowerCasedCharacters === false && requireUpperCasedCharacters === false && requireNumericCharacters === false && requireSpecialCharacters === false) {
           alert("You need to select at least one type of charaters to generate password");
@@ -146,8 +143,8 @@ let validPasswordCharacters = [];
           } 
     
 
-        // If statements to see if characters to be used and concat to validPasswordCharacters storing all
-        // valid characters available for selection
+        // "IF" statements used to see if characters to be used based on True booleans.
+        // If true .concat used to merge valid arrays in to one so we have only valid characters
 
         if (requireLowerCasedCharacters === true) {
           validPasswordCharacters = validPasswordCharacters.concat(lowerCasedCharacters)
@@ -166,9 +163,9 @@ let validPasswordCharacters = [];
         }
 
 // Task inferred that you should choose a random amount of characters from multiple arrays
-// then combine. Seemed wrong or more complicated. I chose to concat all valid arrays in to one 
+// then combine. Seemed wrong or more complicated! I chose to concat all valid arrays in to one 
 // as above and then just random pick from one valid array to the length of characters 
-// originally choosen by user
+// originally chosen by user using Math
 
 let finalPassword = [];
 
