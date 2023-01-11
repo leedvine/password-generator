@@ -109,6 +109,15 @@ let validPasswordCharacters = [];
 
 // Function to prompt user for password options and store data
   function getPasswordOptions() {
+
+    // Clears out valid password array should the generator run more than
+    //once. Without this if re-run it kept previously approved criteria
+    // as well as newly selected criteria - potentially providing wrong 
+    // password eg...first time lowercase selected, 2nd time not selected 
+    // but still given
+    validPasswordCharacters = []
+
+    // Prompt for passord length
     passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
   
     // While Loop created to alert and then repeat question if answer is outside the length paramater 
