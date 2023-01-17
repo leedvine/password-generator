@@ -7,19 +7,19 @@ It will allow show alerts of validation and errors, prompting the user to select
 
 ### Screenshot showing example of what user presented with
 
-![](./images/start-screen.jpg)
+![](./assets/images/start-screen.jpg)
 <br><br>
 
 ### Screenshot showing prompt
-![](./images/prompt.jpg)
+![](./assets/images/prompt.jpg)
 <br><br>
 
 ### Screenshot showing alert
-![](./images/alert.jpg)
+![](./assets/images/alert.jpg)
 <br><br>
 
 ### Screenshot showing final example of result expected
-![](./images/result.jpg)
+![](./assets/images/result.jpg)
 <br><br>
 
 ### Links
