@@ -118,12 +118,12 @@ let validPasswordCharacters = [];
     validPasswordCharacters = []
 
     // Prompt for passord length
-    passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 62"));
+    passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 10 and 64"));
   
     // While Loop created to alert and then repeat question if answer is outside the length paramater 
-    while(passwordLength < 8 || passwordLength > 64) {
-        alert("Please specify a length between 8 and 64 charcters");
-        passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 8 and 64"));
+    while(passwordLength < 10 || passwordLength > 64) {
+        alert("Please specify a length between 10 and 64 charcters");
+        passwordLength = (prompt("Please state how many charcters you'd like your password to be. Must be between 10 and 64"));
         } 
   
         // Repeat back to the user how many characters the user will have  
